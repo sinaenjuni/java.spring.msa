@@ -1,5 +1,6 @@
 package com.msa.kakaoapi.api;
 
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -16,6 +17,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import java.util.Map;
 
+@RateLimiter(name="default")
 @Service
 public class LocationAPI {
 

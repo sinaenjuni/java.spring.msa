@@ -18,6 +18,8 @@ dependencies {
     implementation 'org.projectlombok:lombok'
     implementation 'com.googlecode.json-simple:json-simple:1.1'
     implementation 'org.jsoup:jsoup:1.14.3'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:3.1.0'
+    implementation 'io.github.resilience4j:resilience4j-spring-boot2:1.5.0'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.kafka:spring-kafka-test'

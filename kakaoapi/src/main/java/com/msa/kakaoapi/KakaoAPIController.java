@@ -6,6 +6,7 @@ import com.msa.kakaoapi.api.LocationAPI;
 import com.msa.kakaoapi.dto.Location;
 
 import com.sun.media.jfxmedia.logging.Logger;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
 import lombok.extern.flogger.Flogger;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -29,7 +30,8 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("kakaoapi")
+//@RequestMapping("kakaoapi")
+@RequestMapping
 public class KakaoAPIController {
 
     @Autowired

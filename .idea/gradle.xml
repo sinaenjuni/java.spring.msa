@@ -5,6 +5,24 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/APIgateway" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/APIgateway" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/NamingServer" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/NamingServer" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/UserManagement" />
         <option name="modules">
           <set>
@@ -18,6 +36,24 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/WebService" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/WebService2" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/WebService2" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Webservices" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Webservices" />
           </set>
         </option>
       </GradleProjectSettings>

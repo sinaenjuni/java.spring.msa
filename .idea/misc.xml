@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/APIgateway" />
     <file type="web" url="file://$PROJECT_DIR$/kakaoapi" />
+    <file type="web" url="file://$PROJECT_DIR$/NamingServer" />
     <file type="web" url="file://$PROJECT_DIR$/UserManagement" />
     <file type="web" url="file://$PROJECT_DIR$/WebService" />
+    <file type="web" url="file://$PROJECT_DIR$/WebService2" />
+    <file type="web" url="file://$PROJECT_DIR$/Webservices" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

@@ -1,5 +1,7 @@
 package com.msa.usermanagement.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.msa.usermanagement.kafka.service.ProducerService;
 import com.msa.usermanagement.model.RoleType;
 import com.msa.usermanagement.model.User;
 import com.msa.usermanagement.repository.UserRepository;
@@ -10,9 +12,14 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.function.Supplier;
 
+
+@CrossOrigin
 @RestController
 @RequestMapping("users")
 public class UserManagementController {
+    ObjectMapper mapper = new ObjectMapper();
+    @Autowired
+    private ProducerService producerService;
 
     @Autowired
     public UserRepository userRepository;
@@ -37,14 +44,18 @@ public class UserManagementController {
         return userRepository.findAll();
     }
 
+    @ResponseBody
     @PostMapping
-    public String postUser(User user){  // form tag를 이용해서 body의 내용을 가져온다
+    public String postUser(@RequestBody User user){  // form tag를 이용해서 body의 내용을 가져온다
         System.out.println(user.toString());
         user.setRole(RoleType.USER);
         userRepository.save(user);
+
+        String kafka_message = "{\"action\":\"create\", \"userId\":\""+user.getId()+"\", \"password\":\""+user.getPassword()+"\"}";
+        producerService.sendMessage(kafka_message);
+
         return user.toString();
     }
-
     // password
     @Transactional // 함수 종료시에 자동으로 commit이 된다. 더티 체킹으로 data update 한다.
     @PutMapping("{id}")
@@ -57,9 +68,6 @@ public class UserManagementController {
 
         return user;
     }
-
-
-
     @DeleteMapping("/{id}")
     public String deleteTest(@PathVariable int id){
         try{
