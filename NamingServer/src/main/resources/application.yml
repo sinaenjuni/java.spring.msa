@@ -1,0 +1,13 @@
+
+spring:
+  application:
+  name: naming-server
+
+server:
+  port: 8761
+
+  # naming server \uC790\uAE30 \uC790\uC2E0\uC5D0 \uB300\uD55C \uC815\uBCF4\uB294 \uB4F1\uB85D\uD558\uC9C0 \uC54A\uB3C4\uB85D \uC124\uC815=false=false
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
